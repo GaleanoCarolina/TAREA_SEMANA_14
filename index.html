@@ -32,8 +32,10 @@
       
         const habilidades = data.abilities.map(h => h.ability.name);
         document.getElementById("pista").innerText =
-          `🔍 Pista: Tiene ${habilidades.length} habilidad(es), su tipo principal es '${tipo}' y su nombre empieza por ${nombrePokemon[0]}. Sus habilidades son las siguientes: ${habilidades.join(", ")}. Su genracion es ${generacion}
-  `;
+          `🔍 Pista 1: Tiene ${habilidades.length} habilidad(es), su tipo principal es '${tipo}' y su nombre empieza por ${nombrePokemon[0]}.
+          🔍 Pista 2: Sus habilidades son las siguientes: ${habilidades.join(", ")}.
+          🔍 Pista 3: Su genracion es ${generacion}`;
+
       } catch (error) {
         document.getElementById("pista").innerText = "❌ Error al cargar el Pokémon.";
       }
